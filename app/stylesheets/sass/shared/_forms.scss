@@ -1,0 +1,27 @@
+.form-control {
+    display:block;
+    width:100%;
+
+    label {
+        display:block;
+        margin-bottom:0.25em;
+    }
+
+    input {
+        display:block;
+        width:100%;
+        font-size:18px;
+        margin-bottom:1em;
+        padding:0.5em;
+        outline:0;
+        border:0;
+        border-bottom:1px solid $med-grey;
+
+        &:focus {
+            border-bottom-color:$light-blue;
+        }
+        &.ng-touched.ng-invalid {
+            border-bottom-color:red;
+        }
+    }
+}

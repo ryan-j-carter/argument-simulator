@@ -1,0 +1,43 @@
+#newpoll {
+    max-width:500px;
+    margin:1em auto;
+
+    label {
+        display:block;
+    }
+
+    input, #add-choice {
+        width:100%;
+        border:1px solid $med-grey;
+        font-size:16px;
+        margin:0.2em 0;
+        padding: 0.5em 0.4em;
+    }
+
+    #poll-choices {
+        list-style-type:none;
+        .choice {
+            position:relative;
+            .remove-choice {
+                position:absolute;
+                display:inline-block;
+                width:20px; height:20px;
+                line-height:20px;
+                text-align:center;
+                vertical-align:middle;
+                right:-1.6em; top:50%;
+                transform:translateY(-50%);
+                cursor:pointer;
+                background-color:$light-grey;
+                border-radius:50%;
+                color:$med-grey;
+            }
+        }
+    }
+
+    #add-choice {
+        cursor:pointer;
+        color:$med-grey;
+        margin-bottom:1em;
+    }
+}

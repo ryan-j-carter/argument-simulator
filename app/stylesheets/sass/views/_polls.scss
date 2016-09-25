@@ -1,0 +1,29 @@
+.polls-list {
+    max-width:750px;
+    margin:0 auto;
+    list-style-type:none;
+
+    li {
+        a {
+            display:flex;
+            justify-content:space-between;
+            align-items:middle;
+            text-decoration:none;
+            color:$dark-grey;
+            padding:0.3em 0;
+
+            .list-question {
+                font-weight:500;
+            }
+            .list-user {
+                font-weight:400;
+            }
+        }
+        a:hover {
+            background-color:$light-grey;
+            .list-question {
+                color:$blue;
+            }
+        }
+    }
+}

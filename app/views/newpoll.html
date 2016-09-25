@@ -1,0 +1,19 @@
+<banner data-title="'New Poll'"
+        data-desc="'Create a new poll for others to see!'"
+        data-signup="!user.loggedIn"></banner>
+
+<div id="newpoll">
+    <form name="newPoll.form">
+        <label for="question">Question</label>
+        <input type="text" name="question" minlength="5" maxlength="100" ng-model="newPoll.question" required/><br>
+        <label for="choices">Choices</label>
+        <ul id="poll-choices" name="choices" ng-model="newPoll.choicesList">
+            <li class="choice" ng-repeat="choice in newPoll.choices track by $index">
+                <input type="text" ng-model="newPoll.choices[$index]" required />
+                <span class="remove-choice" ng-click="newPoll.removeChoice($index)">&times;</span>
+            </li>
+        </ul>
+        <div id="add-choice" ng-click="newPoll.addChoice()">Click to add option...</div>
+        <button class="btn btn-primary" ng-click="newPoll.create(user.username)">Create Poll</button>
+    </form>
+</div>

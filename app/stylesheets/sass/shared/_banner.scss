@@ -1,0 +1,17 @@
+.banner {
+    text-align:center;
+    background-color:$blue;
+    color:white;
+    padding:1.5em 0;
+    margin-bottom:1em;
+
+    .banner-title {
+        font-weight:500;
+        font-size:3em;
+    }
+    .banner-desc {
+        font-weight:400;
+        font-size:1.75em;
+        padding:0.75em 0;
+    }
+}

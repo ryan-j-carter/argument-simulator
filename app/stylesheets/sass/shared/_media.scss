@@ -1,0 +1,13 @@
+@media (min-width:850px) {
+    #header {
+        flex-direction:row;
+
+        .navlist {
+            flex-direction:row;
+
+            #welcome {
+                margin-right:1.5em;
+            }
+        }
+    }
+}

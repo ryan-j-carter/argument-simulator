@@ -1,0 +1,17 @@
+.btn {
+    outline:0;
+    border:0;
+    padding:0.6em 1.5em;
+    font-size:18px;
+    font-weight:500;
+    cursor:pointer;
+
+    &-primary {
+        background-color:$primary-background;
+        color:white;
+
+        &:hover {
+            background-color:$primary-hover;
+        }
+    }
+}

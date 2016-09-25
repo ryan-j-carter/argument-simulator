@@ -1,0 +1,37 @@
+#home {
+    display:flex;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:2em;
+
+    .blurb {
+        max-width:300px;
+        text-align:center;
+        margin:0 1em 1em 1em;
+        .blurb-icon {
+            font-weight:500;
+            font-size:4em;
+            margin-bottom:0.2em;
+            text-shadow:1px 1px black;
+
+            &#browse {
+                color: $blue;
+            }
+            &#opinion {
+                color: $primary-background;
+            }
+            &#account {
+                color: $blood-red;
+            }
+        }
+        .blurb-title {
+            font-weight:400;
+            color:$dark-grey;
+            margin-bottom:0.6em;
+        }
+        .blurb-desc {
+            line-height:1.3em;
+        }
+    }
+}

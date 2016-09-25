@@ -1,0 +1,35 @@
+#poll-question {
+    text-align:center;
+    color:$dark-grey;
+    margin-bottom:1em;
+    font-weight:400;
+}
+
+#poll, #poll-results {
+    display:inline-block;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+
+#poll-results {
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+
+    .poll-result {
+        text-align:center;
+        margin:0 0.5em;
+        min-width:100px;
+
+        .vote-count {
+            width:30px;
+            margin:0 auto;
+            background-color:$blue;
+        }
+
+        .poll-choice {
+            margin-top:0.5em;
+            font-size:1.2em;
+        }
+    }
+}

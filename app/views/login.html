@@ -1,0 +1,13 @@
+<banner data-title="'Log In'"
+        data-desc="'Log in to an existing account to see your polls and create more.'"
+        data-signup="false"></banner>
+
+<div class="login-controls">
+    <form name="user.form" class="form-control" novalidate>
+        <label for="username">Name: <em class="invalid" ng-show="user.invalidUser">Invalid username</em></label>
+        <input name="username" type="text" minlength="5" maxlength="14" ng-model="username"  ng-focus="user.invalidUser=false" required>
+        <label for="password">Password: <em class="invalid" ng-show="user.invalidPass">Incorrect password</em></label>
+        <input name="password" type="password" minlength="6" maxlength="20" ng-model="password" ng-focus="user.invalidPass=false" required>
+        <button class="btn btn-primary" ng-click="user.login()">Log In</button>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+#header {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid $med-grey;
+
+    .navlist {
+        list-style-type:none;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        li {
+            color:$dark-grey;
+
+            #app-title {
+                text-align:center;
+                font-weight:500;
+                font-size:1.5em;
+                padding:0 1em;
+            }
+            a {
+                height:100%;
+                display:block;
+                text-decoration:none;
+                padding:1em;
+                color:$dark-grey;
+
+                &:not(#app-title):hover {
+                    background-color:$light-grey;
+                }
+                &:active {
+                    color:$dark-grey;
+                }
+            }
+        }
+    }
+}

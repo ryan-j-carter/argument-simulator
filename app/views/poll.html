@@ -1,0 +1,24 @@
+<banner data-title="'Apple'"
+        data-desc="poll.desc"
+        data-signup="!user.loggedIn"></banner>
+
+<span ng-init="self.answered = hasAnswered($stateParams.id)"></span>
+<h1 id="poll-question" ng-bind="poll.question"></h1>
+<div id="poll" ng-if="!poll.answered">
+    <div class="poll-choice" ng-repeat="choice in poll.choices">
+        <label>
+            <input type="radio" ng-model="poll.choice" ng-value="$index">
+            {{choice}}
+        </label>
+    </div>
+    <button class="btn btn-primary" ng-click="poll.submitVote()">Submit Vote</button>
+</div>
+<div id="poll-results" ng-if="poll.answered">
+    <div class="poll-result" ng-repeat="choice in poll.choices">
+        <!-- Calculate the proportion of votes to create a bar graph effect -->
+        <div class="vote-count" ng-style="{
+            'height': poll.votes[$index] / poll.voteCount * 140 + 1 + 'px'
+        }"></div>
+        <div class="poll-choice">{{choice}}</div>
+    </div>
+</div>

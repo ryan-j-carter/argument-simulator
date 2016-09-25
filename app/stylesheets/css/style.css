@@ -1,0 +1,211 @@
+html, body, div, ul, li, a, p, h1, h2, h3, h4, form, input, label, button {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto'; }
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa; }
+  #header .navlist {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #header .navlist li {
+      color: #444; }
+      #header .navlist li #app-title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5em;
+        padding: 0 1em; }
+      #header .navlist li a {
+        height: 100%;
+        display: block;
+        text-decoration: none;
+        padding: 1em;
+        color: #444; }
+        #header .navlist li a:not(#app-title):hover {
+          background-color: #ddd; }
+        #header .navlist li a:active {
+          color: #444; }
+
+.banner {
+  text-align: center;
+  background-color: #4393b9;
+  color: white;
+  padding: 1.5em 0;
+  margin-bottom: 1em; }
+  .banner .banner-title {
+    font-weight: 500;
+    font-size: 3em; }
+  .banner .banner-desc {
+    font-weight: 400;
+    font-size: 1.75em;
+    padding: 0.75em 0; }
+
+.form-control {
+  display: block;
+  width: 100%; }
+  .form-control label {
+    display: block;
+    margin-bottom: 0.25em; }
+  .form-control input {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #aaa; }
+    .form-control input:focus {
+      border-bottom-color: #a1c0d8; }
+    .form-control input.ng-touched.ng-invalid {
+      border-bottom-color: red; }
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 0.6em 1.5em;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer; }
+  .btn-primary {
+    background-color: #EBB62D;
+    color: white; }
+    .btn-primary:hover {
+      background-color: #BF8E11; }
+
+#home {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em; }
+  #home .blurb {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 1em 1em 1em; }
+    #home .blurb .blurb-icon {
+      font-weight: 500;
+      font-size: 4em;
+      margin-bottom: 0.2em;
+      text-shadow: 1px 1px black; }
+      #home .blurb .blurb-icon#browse {
+        color: #4393b9; }
+      #home .blurb .blurb-icon#opinion {
+        color: #EBB62D; }
+      #home .blurb .blurb-icon#account {
+        color: #ff1a1a; }
+    #home .blurb .blurb-title {
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 0.6em; }
+    #home .blurb .blurb-desc {
+      line-height: 1.3em; }
+
+.login-controls {
+  max-width: 400px;
+  margin: 2em auto 0 auto; }
+  .login-controls .invalid {
+    color: red;
+    font-size: 14px; }
+
+.polls-list {
+  max-width: 750px;
+  margin: 0 auto;
+  list-style-type: none; }
+  .polls-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+    text-decoration: none;
+    color: #444;
+    padding: 0.3em 0; }
+    .polls-list li a .list-question {
+      font-weight: 500; }
+    .polls-list li a .list-user {
+      font-weight: 400; }
+  .polls-list li a:hover {
+    background-color: #ddd; }
+    .polls-list li a:hover .list-question {
+      color: #4393b9; }
+
+#poll-question {
+  text-align: center;
+  color: #444;
+  margin-bottom: 1em;
+  font-weight: 400; }
+
+#poll, #poll-results {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%); }
+
+#poll-results {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+  #poll-results .poll-result {
+    text-align: center;
+    margin: 0 0.5em;
+    min-width: 100px; }
+    #poll-results .poll-result .vote-count {
+      width: 30px;
+      margin: 0 auto;
+      background-color: #4393b9; }
+    #poll-results .poll-result .poll-choice {
+      margin-top: 0.5em;
+      font-size: 1.2em; }
+
+#newpoll {
+  max-width: 500px;
+  margin: 1em auto; }
+  #newpoll label {
+    display: block; }
+  #newpoll input, #newpoll #add-choice {
+    width: 100%;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    margin: 0.2em 0;
+    padding: 0.5em 0.4em; }
+  #newpoll #poll-choices {
+    list-style-type: none; }
+    #newpoll #poll-choices .choice {
+      position: relative; }
+      #newpoll #poll-choices .choice .remove-choice {
+        position: absolute;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        right: -1.6em;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background-color: #ddd;
+        border-radius: 50%;
+        color: #aaa; }
+  #newpoll #add-choice {
+    cursor: pointer;
+    color: #aaa;
+    margin-bottom: 1em; }
+
+@media (min-width: 850px) {
+  #header {
+    flex-direction: row; }
+    #header .navlist {
+      flex-direction: row; }
+      #header .navlist #welcome {
+        margin-right: 1.5em; } }
+
+/*# sourceMappingURL=style.css.map */

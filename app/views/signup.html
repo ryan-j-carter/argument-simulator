@@ -1,0 +1,13 @@
+<banner data-title="'Sign Up'"
+        data-desc="'Make an account for even more exciting features!!'"
+        data-signup="false"></banner>
+
+<div class="login-controls">
+    <form name="user.form" class="form-control" novalidate>
+        <label for="username">Name: <em class="invalid" ng-show="user.invalid">Username taken</em></label>
+        <input name="username" type="text" minlength="5" maxlength="14" ng-model="username"  ng-focus="user.invalid=false" required>
+        <label for="password">Password:</label>
+        <input name="password" type="password" minlength="6" maxlength="20" ng-model="password" required>
+        <button class="btn btn-primary" ng-click="user.signup()">Sign Up</button>
+    </form>
+</div>

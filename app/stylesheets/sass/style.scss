@@ -1,0 +1,14 @@
+@import 'shared/variables';
+@import 'shared/reset';
+@import 'shared/header';
+@import 'shared/banner';
+@import 'shared/forms';
+@import 'shared/buttons';
+
+@import 'views/home';
+@import 'views/login';
+@import 'views/polls';
+@import 'views/poll';
+@import 'views/newpoll';
+
+@import 'shared/media';
